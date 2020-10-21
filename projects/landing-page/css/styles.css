@@ -58,6 +58,12 @@ nav a{
 .youractiveclass2{background: linear-gradient(to right top,#005c97,#363795);}
 .youractiveclass3{background: linear-gradient(to right top,#e53935,#e35d5b);} */
 
+.active ,li:hover{
+    background-color: turquoise;
+    color: wheat;
+}
+
+
 
 .bubble{
 

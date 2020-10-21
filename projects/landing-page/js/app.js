@@ -15,6 +15,7 @@ function mainFunction(){
         item.style.margin="30px";
         item.id='navbar'+i;
         item.className='navbar'+i;
+        item.className='active1';
         a.id='navbarr'+i;
         ul.appendChild(item);
         item.appendChild(a);
@@ -24,6 +25,22 @@ function mainFunction(){
 
 }
 mainFunction();
+
+//add active class 
+const activeClassUl = document.getElementById('navbar__list');
+const activeClass=activeClassUl.querySelectorAll('.active1');
+// console.log(activeClass);
+// console.log(activeClassUl);
+for (var i = 0; i < activeClass.length; i++) {
+  activeClass[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+  }
+  this.className += " active";
+  });
+}
+
 
 //className for evry item in unorder list
 const item0 = document.querySelector('#navbar0');
