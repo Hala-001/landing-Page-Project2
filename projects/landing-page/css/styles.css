@@ -17,7 +17,32 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-.Navigation{
+
+nav{
+    min-height:10vh;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    font-size: 1.5rem;
+    flex: 1;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    color: tomato;
+    text-decoration: none;
+}
+
+/* .Navigation{
     
     display: flex;
     justify-content: left;
@@ -27,8 +52,21 @@ body {
     align-items: center;
     
     
+} */
+
+/* .youractiveclass1{background: linear-gradient(to right top, #f46b45,#eea849);}
+.youractiveclass2{background: linear-gradient(to right top,#005c97,#363795);}
+.youractiveclass3{background: linear-gradient(to right top,#e53935,#e35d5b);} */
+
+
+.bubble{
+
+   position: absolute;
+   z-index: -2;
+   background:linear-gradient(to right top,#f46b45,#eea8ee);
 }
-html{scroll-behavior: smooth;}
+
+
 
 /* Typeography General*/
 h1 {
