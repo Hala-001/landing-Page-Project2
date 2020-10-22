@@ -1,13 +1,15 @@
 # Landing Page Project
 
-## Table of Contents
+## Technologies:
+* Java Script
+* CSS
+* HTML
+* Github
 
-* [Instructions](#instructions)
+## Features:
+* Navigation bar
 
-## Instructions
+## Overview:
+This program is written in HTML,CSS and javascript, first, The Navigation is built dynamically as an unordered list in for loop,
+Styling has been added for active states and used with `.getBoundingClientRect()` and Intersection Observer.
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
