@@ -24,22 +24,6 @@ function mainFunction() {
 }
 mainFunction();
 
-// //add active class 
-// const activeClassUl = document.getElementById('navbar__list');
-// const activeClass=activeClassUl.querySelectorAll('.active1');
-// // console.log(activeClass);
-// // console.log(activeClassUl);
-// for (var i = 0; i < activeClass.length; i++) {
-//   activeClass[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("active");
-//   if (current.length > 0) { 
-//     current[0].className = current[0].className.replace(" active", "");
-//   }
-//   this.className += " active";
-//   });
-// }
-
-
 //className for evry item in unorder list
 const item0 = document.querySelector('#navbar0');
 const item1 = document.querySelector('#navbar1');
@@ -116,9 +100,9 @@ const w = document.getElementById("navbar3").addEventListener("click", function 
 
 
 const sections = document.querySelectorAll('section');
-// console.log(sections);
+
 const bubble = document.querySelector('.bubble');
-// console.log(bubble);
+
 const gradients = [
   'linear-gradient(to right top, #f46b45,#eea849)',
   'linear-gradient(to right top,#005c97,#363795)',
