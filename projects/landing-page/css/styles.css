@@ -8,7 +8,7 @@
  *
 */
 
-
+/* html{scroll-behavior: smooth;} */
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
@@ -61,8 +61,7 @@ nav a{
 /* .active ,li:hover{
     background-color: turquoise;
     color: wheat;
-} */
-
+}  */
 
 
 .bubble{
@@ -115,6 +114,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    
 }
 
 
@@ -283,6 +283,7 @@ section.your-active-class .landing__container::after {
 @media (min-width: 600px) and (max-width:900px){
     
     nav ul li{margin: 5px;
+        
     }
 }
 
@@ -292,6 +293,8 @@ section.your-active-class .landing__container::after {
     @media only screen and (max-width: 600px) {
     
     
-    nav ul li{margin: 5px;}
+    nav ul li{margin: 5px;
+    }
+    .active1{font-size: 10px;}
     
   }

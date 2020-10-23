@@ -63,7 +63,7 @@ const x = document.getElementById("navbar0").addEventListener("click", function 
   element.scrollIntoView();
   element.scrollIntoView(false);
   element.scrollIntoView({ block: "end" });
-  element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 
 });
 
@@ -76,7 +76,7 @@ const y = document.getElementById("navbar1").addEventListener("click", function 
   element2.scrollIntoView();
   element2.scrollIntoView(false);
   element2.scrollIntoView({ block: "end" });
-  element2.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  element2.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 });
 // Scroll to section on navigation click
 const z = document.getElementById("navbar2").addEventListener("click", function () {
@@ -85,7 +85,7 @@ const z = document.getElementById("navbar2").addEventListener("click", function 
   element3.scrollIntoView();
   element3.scrollIntoView(false);
   element3.scrollIntoView({ block: "end" });
-  element3.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  element3.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 });
 // Scroll to section on navigation click
 const w = document.getElementById("navbar3").addEventListener("click", function () {
@@ -94,11 +94,11 @@ const w = document.getElementById("navbar3").addEventListener("click", function 
   element4.scrollIntoView();
   element4.scrollIntoView(false);
   element4.scrollIntoView({ block: "end" });
-  element4.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  element4.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 });
 
 
-
+//use intersection observer and getBoundingClientRect();
 const sections = document.querySelectorAll('section');
 
 const bubble = document.querySelector('.bubble');
