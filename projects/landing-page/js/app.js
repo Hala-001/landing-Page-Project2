@@ -24,6 +24,34 @@ function mainFunction() {
 }
 mainFunction();
 
+function yourActiveClass(){
+  const section1 = document.getElementById('section1');
+  const section2 = document.getElementById('section2');
+  const section3 = document.getElementById('section3');
+  const section4 = document.getElementById('section4');
+  //console.log(sections);
+  const arrSection1 = section1.className.split(" ");
+  const arrSection2 = section2.className.split(" ");
+  const arrSection3 = section3.className.split(" ");
+  const arrSection4 = section4.className.split(" ");
+
+  console.log('arrSection1 '+arrSection1);
+  console.log('arrSection2 '+arrSection2);
+  console.log('arrSection3 '+arrSection3);
+  console.log('arrSection4 '+arrSection4);
+
+  const name="your-active-class";
+
+  if ((arrSection1.indexOf(name) >=1) || (arrSection2.indexOf(name) >=1) 
+  || (arrSection3.indexOf(name) >=1) || (arrSection4.indexOf(name) >=1)){
+    console.log("hiii");
+    section1.classList.remove("your-active-class");
+    section2.classList.remove("your-active-class");
+    section3.classList.remove("your-active-class");
+    section4.classList.remove("your-active-class");
+  }
+}
+
 //className for evry item in unorder list
 const item0 = document.querySelector('#navbar0');
 const item1 = document.querySelector('#navbar1');
@@ -64,6 +92,13 @@ const x = document.getElementById("navbar0").addEventListener("click", function 
   element.scrollIntoView(false);
   element.scrollIntoView({ block: "end" });
   element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  yourActiveClass();
+  arr = element.className.split(" ");
+  // console.log(arr);
+  const name="your-active-class";
+  if (arr.indexOf(name) == -1) {
+    element.className += " " + name;
+  }
 
 });
 
@@ -77,6 +112,13 @@ const y = document.getElementById("navbar1").addEventListener("click", function 
   element2.scrollIntoView(false);
   element2.scrollIntoView({ block: "end" });
   element2.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  yourActiveClass();
+  arr = element2.className.split(" ");
+  // console.log(arr);
+  const name="your-active-class";
+  if (arr.indexOf(name) == -1) {
+    element2.className += " " + name;
+  }
 });
 // Scroll to section on navigation click
 const z = document.getElementById("navbar2").addEventListener("click", function () {
@@ -86,6 +128,13 @@ const z = document.getElementById("navbar2").addEventListener("click", function 
   element3.scrollIntoView(false);
   element3.scrollIntoView({ block: "end" });
   element3.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  yourActiveClass();
+  arr = element3.className.split(" ");
+  // console.log(arr);
+  const name="your-active-class";
+  if (arr.indexOf(name) == -1) {
+    element3.className += " " + name;
+  }
 });
 // Scroll to section on navigation click
 const w = document.getElementById("navbar3").addEventListener("click", function () {
@@ -95,6 +144,13 @@ const w = document.getElementById("navbar3").addEventListener("click", function 
   element4.scrollIntoView(false);
   element4.scrollIntoView({ block: "end" });
   element4.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  yourActiveClass();
+  arr = element4.className.split(" ");
+  // console.log(arr);
+  const name="your-active-class";
+  if (arr.indexOf(name) == -1) {
+    element4.className += " " + name;
+  }
 });
 
 
@@ -124,8 +180,9 @@ let observer = new IntersectionObserver(navCheck, options);
 function navCheck(entries) {
   entries.forEach(entry => {
     const className = entry.target.className;
+    const classNameArr = className.split(' ');
 
-    const activeAnchor = document.querySelector(`[data-page=${className}]`);
+    const activeAnchor = document.querySelector(`[data-page=${classNameArr[0]}]`);
 
     const gradientIndex = entry.target.getAttribute('data-index');
 
